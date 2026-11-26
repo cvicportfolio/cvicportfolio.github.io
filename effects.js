@@ -152,7 +152,7 @@
   /* ---------- Scroll reveals ---------- */
   function setupReveals() {
     const groups = [
-      [".section-head"], [".featured"], [".grid .card", 0.08], [".skills > div", 0.06],
+      [".stats-title"], [".stats .stat", 0.12], [".section-head"], [".featured"], [".grid .card", 0.08], [".skills > div", 0.06],
       [".process .step", 0.12], [".contact h2"], [".contact p"], [".contact .ctas"],
     ];
     groups.forEach(([sel, stagger = 0]) => {
@@ -167,6 +167,7 @@
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
         e.target.classList.add("in");
+        $$("b[data-count]", e.target).forEach(countUp);
         io.unobserve(e.target);
       });
     }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
@@ -276,7 +277,6 @@
     if (started) return;
     started = true;
     hero && hero.classList.add("ready");
-    setTimeout(() => $$(".stat b[data-count]").forEach(countUp), 750);
   };
   requestAnimationFrame(startIntro);
   setTimeout(startIntro, 300); // fallback when rAF is throttled (background tabs)

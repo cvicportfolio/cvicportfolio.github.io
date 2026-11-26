@@ -48,10 +48,14 @@
   .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--line); transition: transform .2s, border-color .2s; }
   .btn:hover { transform: translateY(-1px); border-color: var(--muted); }
   .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-  .stats { margin-top: 72px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
-  .stat { padding: 24px 16px 0 0; }
+  .proof { padding: 72px 0 88px; border-top: 0; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 32px; }
+  .stats-title { grid-column: 1 / -1; padding: 0 0 36px; font-family: var(--serif); font-size: clamp(28px, 3.6vw, 44px); line-height: 1.1; color: var(--text); max-width: 22ch; }
+  .stats-title em { color: var(--accent); }
+  .stat { padding: 24px 0 0; border-left: 1px solid var(--line); padding-left: 18px; }
+  .stat-kicker { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
   .stat b { display: block; font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.1; }
-  .stat span { font-size: 13px; color: var(--muted); }
+  .stat p { margin-top: 8px; font-size: 14px; line-height: 1.5; color: var(--muted); }
 
   section { padding: 96px 0; border-top: 1px solid var(--line); }
   .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 48px; flex-wrap: wrap; }
@@ -116,9 +120,11 @@
     .featured { grid-template-columns: 1fr; }
     .featured .body { padding: 30px; }
     .grid, .skills, .stats { grid-template-columns: 1fr 1fr; }
+    .stats { gap: 24px 24px; }
     .process { grid-template-columns: 1fr; }
   }
   @media (max-width: 620px) {
+    .stats { grid-template-columns: 1fr; }
     nav ul { display: none; }
     .hero { padding: 80px 0 64px; }
     .grid { grid-template-columns: 1fr; }
@@ -158,15 +164,37 @@
       <a class="btn primary" href="#projects">See projects ↓</a>
       <a class="btn" href="#contact">Let's talk</a>
     </div>
-    <div class="stats">
-      <div class="stat"><b data-count="15" data-suffix=" yrs">15 yrs</b><span>in crypto &amp; fintech</span></div>
-      <div class="stat"><b data-count="373" data-suffix="K">373K</b><span>orders/s per pair, matching engine</span></div>
-      <div class="stat"><b>US$1M</b><span>pre-seed raised</span></div>
-      <div class="stat"><b data-count="20">20</b><span>person team led</span></div>
-    </div>
   </div>
   <div class="scroll-cue" aria-hidden="true">Scroll</div>
 </header>
+
+<section class="proof" aria-label="Career highlights">
+  <div class="wrap">
+    <div class="stats">
+      <p class="stats-title">15 years building the <em>rails crypto money moves on</em>.</p>
+      <div class="stat">
+        <span class="stat-kicker">Experience</span>
+        <b data-count="15" data-suffix=" yrs">15 yrs</b>
+        <p>In crypto since 2011. I helped launch Spain's first crypto exchange and one of the first crypto debit cards, then founded my own exchange.</p>
+      </div>
+      <div class="stat">
+        <span class="stat-kicker">Engineering</span>
+        <b data-count="373" data-suffix="K">373K</b>
+        <p>Orders per second on a single pair, from the matching engine I architected. Every fill is verified.</p>
+      </div>
+      <div class="stat">
+        <span class="stat-kicker">Regulation</span>
+        <b>VASP</b>
+        <p>Licence secured, along with a full KYC/AML system and an EU subsidiary in Lithuania.</p>
+      </div>
+      <div class="stat">
+        <span class="stat-kicker">Leadership</span>
+        <b>US$1M</b>
+        <p>Raised at pre-seed. I led a team of 20 executives, engineers and compliance officers.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
