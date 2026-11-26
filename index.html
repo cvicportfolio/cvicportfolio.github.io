@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carlos · cvic — Portfolio</title>
+<meta name="description" content="Portfolio de Carlos (cvic): producto, fintech, apps con IA y webs. Exchange cripto, apps móviles, herramientas de trading y landings multilingües.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0e10;
+    --surface: #15171a;
+    --surface-2: #1c1f23;
+    --line: #2a2e33;
+    --text: #ecebe6;
+    --muted: #9a9b97;
+    --accent: #d4ff5a;
+    --accent-ink: #11130a;
+    --radius: 14px;
+    --max: 1120px;
+    --serif: "Instrument Serif", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(13,14,16,.82); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-family: var(--mono); font-size: 14px; text-decoration: none; letter-spacing: .02em; }
+  .logo span { color: var(--accent); }
+  nav ul { display: flex; gap: 28px; list-style: none; }
+  nav ul a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color .2s; }
+  nav ul a:hover { color: var(--text); }
+
+  .hero { padding: 120px 0 96px; }
+  .eyebrow { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 24px; }
+  .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 7vw, 88px); line-height: 1.02; letter-spacing: -.01em; max-width: 14ch; }
+  .hero h1 em { color: var(--accent); }
+  .hero p.lead { margin-top: 28px; font-size: 19px; color: var(--muted); max-width: 56ch; }
+  .ctas { margin-top: 40px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--line); transition: transform .2s, border-color .2s; }
+  .btn:hover { transform: translateY(-1px); border-color: var(--muted); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .stats { margin-top: 72px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
+  .stat { padding: 24px 16px 0 0; }
+  .stat b { display: block; font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.1; }
+  .stat span { font-size: 13px; color: var(--muted); }
+
+  section { padding: 96px 0; border-top: 1px solid var(--line); }
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 48px; flex-wrap: wrap; }
+  .section-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.5vw, 52px); line-height: 1.05; }
+  .section-head p { color: var(--muted); max-width: 44ch; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+  .tag { font-family: var(--mono); font-size: 12px; padding: 4px 10px; border-radius: 999px; background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+  .kicker { font-family: var(--mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+
+  .featured { display: grid; grid-template-columns: 1.1fr 1fr; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 24px; }
+  .featured .body { padding: 44px; display: flex; flex-direction: column; }
+  .featured h3 { font-family: var(--serif); font-weight: 400; font-size: 38px; line-height: 1.1; margin: 12px 0 16px; }
+  .featured p { color: var(--muted); }
+  .points { list-style: none; margin-top: 20px; display: grid; gap: 10px; }
+  .points li { padding-left: 20px; position: relative; font-size: 15px; }
+  .points li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; border-radius: 2px; background: var(--accent); }
+  .featured .visual { background: var(--surface-2); min-height: 360px; }
+
+  .arch { padding: 36px; display: grid; gap: 10px; align-content: center; height: 100%; font-family: var(--mono); font-size: 12.5px; }
+  .arch .row { display: grid; gap: 10px; }
+  .arch .c3 { grid-template-columns: repeat(3, 1fr); }
+  .arch .c2 { grid-template-columns: repeat(2, 1fr); }
+  .arch .node { border: 1px solid var(--line); background: var(--bg); border-radius: 8px; padding: 10px 12px; }
+  .arch .node small { display: block; color: var(--muted); font-size: 11px; }
+  .arch .node.hot { border-color: var(--accent); }
+  .arch .node.hot b { color: var(--accent); font-weight: 500; }
+  .arch .arrow { text-align: center; color: var(--muted); font-size: 14px; line-height: 1; }
+
+  .phones { display: flex; gap: 14px; justify-content: center; align-items: center; padding: 36px 24px; height: 100%; }
+  .phones img { width: 30%; max-width: 170px; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 20px 40px rgba(0,0,0,.45); }
+  .phones img:nth-child(2) { transform: translateY(-18px); }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; display: flex; flex-direction: column; transition: border-color .2s, transform .2s; }
+  .card:hover { border-color: #3d4249; transform: translateY(-2px); }
+  .card h3 { font-family: var(--serif); font-weight: 400; font-size: 28px; line-height: 1.15; margin: 10px 0 12px; }
+  .card p { color: var(--muted); font-size: 15px; flex: 1; }
+  .card .link { margin-top: 20px; font-size: 14px; font-weight: 500; text-decoration: none; color: var(--accent); }
+  .card .link:hover { text-decoration: underline; }
+  .card .link.off { color: var(--muted); font-weight: 400; }
+
+  .skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .skills h4 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .skills ul { list-style: none; color: var(--muted); font-size: 15px; display: grid; gap: 6px; }
+
+  .process { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 72px; }
+  .step { padding-top: 20px; border-top: 2px solid var(--accent); }
+  .step b { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+  .step h4 { font-size: 18px; font-weight: 600; margin: 8px 0; }
+  .step p { color: var(--muted); font-size: 15px; }
+
+  .contact { text-align: center; padding: 120px 0; }
+  .contact h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 6vw, 72px); line-height: 1.05; }
+  .contact p { color: var(--muted); margin: 20px auto 0; max-width: 46ch; }
+  .contact .ctas { justify-content: center; }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0; font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .featured { grid-template-columns: 1fr; }
+    .featured .body { padding: 30px; }
+    .grid, .skills, .stats { grid-template-columns: 1fr 1fr; }
+    .process { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 620px) {
+    nav ul { display: none; }
+    .hero { padding: 80px 0 64px; }
+    .grid { grid-template-columns: 1fr; }
+    .arch .c3 { grid-template-columns: 1fr 1fr; }
+    section { padding: 72px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">cvic<span>.</span>portfolio</a>
+    <ul>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Producto · Fintech · IA</p>
+    <h1>Construyo productos <em>de principio a fin</em>.</h1>
+    <p class="lead">Soy Carlos. Diseño y lanzo plataformas completas: desde un exchange de criptomonedas con motor de matching propio hasta apps móviles con IA, herramientas de trading y webs multilingües. Trabajo con agentes de IA para llevar ideas a producción rápido y bien.</p>
+    <div class="ctas">
+      <a class="btn primary" href="#proyectos">Ver proyectos ↓</a>
+      <a class="btn" href="#contacto">Hablemos</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>8+</b><span>productos construidos</span></div>
+      <div class="stat"><b>4</b><span>exchanges integrados</span></div>
+      <div class="stat"><b>3</b><span>idiomas en producción</span></div>
+      <div class="stat"><b>Web · Móvil</b><span>iOS y Android</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="proyectos">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Proyectos destacados</h2>
+      <p>Una selección de lo que he construido. Algunos son privados o de clientes: aquí cuento qué hacen y cómo están hechos.</p>
+    </div>
+
+    <article class="featured">
+      <div class="body">
+        <span class="kicker">Fintech · Plataforma completa</span>
+        <h3>Exchange de criptomonedas</h3>
+        <p>Ecosistema completo de un exchange: trading spot y futuros perpetuos, app móvil, panel de administración, web de marketing y gráficos en tiempo real.</p>
+        <ul class="points">
+          <li>Motor de matching de baja latencia sobre Aeron, sin Kafka</li>
+          <li>Motor de perpetuos en Go: margen, mark price, funding y liquidaciones</li>
+          <li>Motor de gráficos propio en WebGL2</li>
+          <li>Backend de KYC, compliance y tesorería; app móvil con Expo</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Go</span><span class="tag">Java · Aeron</span><span class="tag">Django</span><span class="tag">Next.js</span><span class="tag">React Native</span><span class="tag">WebGL2</span><span class="tag">WebSockets</span>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="arch" role="img" aria-label="Arquitectura simplificada del exchange: clientes web, móvil y admin; API y core; motores de matching y perpetuos; servicios de ticker, velas y persistencia">
+          <div class="row c3">
+            <div class="node">Web<small>Next.js</small></div>
+            <div class="node">App móvil<small>Expo</small></div>
+            <div class="node">Admin<small>Next.js</small></div>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="row c2">
+            <div class="node">API<small>Django REST</small></div>
+            <div class="node">Core<small>Go · KYC · tesorería</small></div>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="row c2">
+            <div class="node hot"><b>Matching engine</b><small>Aeron · µs</small></div>
+            <div class="node hot"><b>Perp engine</b><small>Go · riesgo</small></div>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="row c3">
+            <div class="node">Ticker<small>WebSocket</small></div>
+            <div class="node">Velas<small>agregación</small></div>
+            <div class="node">Persistencia<small>DB service</small></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="featured">
+      <div class="body">
+        <span class="kicker">App móvil · IA</span>
+        <h3>Kintsu</h3>
+        <p>App de suscripción con un coach de pareja basado en IA, pensada para lanzarse en Emiratos Árabes Unidos. Diseñé el producto completo: el "cerebro" del coach, el protocolo de seguridad, los precios y las 17 pantallas del prototipo.</p>
+        <ul class="points">
+          <li>Marco de diagnóstico y base de conocimiento propios</li>
+          <li>Protocolo de seguridad para situaciones urgentes</li>
+          <li>Modelo de suscripción con límites de uso</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Diseño de producto</span><span class="tag">LLM</span><span class="tag">Prompt design</span><span class="tag">Mobile UX</span>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="phones">
+          <img src="assets/kintsu-05-home.jpg" alt="Kintsu: pantalla de inicio" loading="lazy">
+          <img src="assets/kintsu-07-coach-chat.jpg" alt="Kintsu: chat con el coach" loading="lazy">
+          <img src="assets/kintsu-10-crack-progress.jpg" alt="Kintsu: pantalla de progreso" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <div class="grid">
+      <article class="card">
+        <span class="kicker">Web · Cliente</span>
+        <h3>Archer Cross</h3>
+        <p>Matchmaking premium para expatriados en Dubái. Web pública más un CRM interno para gestionar todo el proceso de matchmaking.</p>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Drizzle</span><span class="tag">Supabase</span></div>
+        <a class="link" href="https://archercross.ae" target="_blank" rel="noopener">archercross.ae ↗</a>
+      </article>
+
+      <article class="card">
+        <span class="kicker">Web · Multilingüe</span>
+        <h3>Eros on Air</h3>
+        <p>Landing editorial en italiano, inglés y español para un concurso de casting cinematográfico italiano. Estética pompeyana y web 100 % estática.</p>
+        <div class="tags"><span class="tag">Astro 5</span><span class="tag">i18n</span><span class="tag">Cloudflare Pages</span></div>
+        <span class="link off">Proyecto privado</span>
+      </article>
+
+      <article class="card">
+        <span class="kicker">Trading · Datos</span>
+        <h3>liqmap</h3>
+        <p>Mapa diario de los muros de liquidación de BTC y ETH, agregando Binance, Bybit, OKX e Hyperliquid con un modelo propio basado en open interest.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Modelado</span><span class="tag">Heatmaps</span></div>
+        <span class="link off">Herramienta interna</span>
+      </article>
+
+      <article class="card">
+        <span class="kicker">Trading · Herramienta</span>
+        <h3>Binance Futures Calculator</h3>
+        <p>Análisis de una cuenta de futuros: PnL histórico, comisiones, funding, posiciones en vivo y simulador de entradas con riesgo y liquidación.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Vercel</span></div>
+        <a class="link" href="https://binance-calculator-ten.vercel.app" target="_blank" rel="noopener">Ver demo ↗</a>
+      </article>
+
+      <article class="card">
+        <span class="kicker">Herramienta · Startups</span>
+        <h3>Fundraising</h3>
+        <p>App para preparar el pitch a inversores y hacer seguimiento de cada conversación, con seguimientos automáticos y tests antes de cada despliegue.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Automatización</span></div>
+        <span class="link off">Herramienta interna</span>
+      </article>
+
+      <article class="card">
+        <span class="kicker">Cripto · Analítica</span>
+        <h3>Wallet Tracker</h3>
+        <p>Seguimiento de carteras cripto con vista consolidada de saldos y movimientos.</p>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Vercel</span></div>
+        <a class="link" href="https://tx24-wallet-tracker.vercel.app" target="_blank" rel="noopener">Ver demo ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Stack y forma de trabajar</h2>
+      <p>Elijo la herramienta según el problema: Go y Java para latencia, Python para datos, TypeScript para producto.</p>
+    </div>
+    <div class="skills">
+      <div><h4>Frontend</h4><ul><li>Next.js · React</li><li>Astro</li><li>React Native · Expo</li><li>WebGL2</li></ul></div>
+      <div><h4>Backend</h4><ul><li>Go</li><li>Python · Django</li><li>Java · Aeron</li><li>PostgreSQL · SQLite</li></ul></div>
+      <div><h4>Infra</h4><ul><li>Vercel · Cloudflare</li><li>Fly.io · Docker</li><li>WebSockets</li><li>Monorepos pnpm</li></ul></div>
+      <div><h4>IA</h4><ul><li>Desarrollo con agentes (Claude Code)</li><li>Diseño de prompts</li><li>Coaches y asistentes con LLM</li></ul></div>
+    </div>
+
+    <div class="process">
+      <div class="step"><b>01</b><h4>Entender el problema</h4><p>Defino qué hay que resolver, para quién y cómo se mide el éxito antes de escribir código.</p></div>
+      <div class="step"><b>02</b><h4>Construir rápido</h4><p>Prototipo funcional en días, con agentes de IA acelerando el desarrollo y tests desde el principio.</p></div>
+      <div class="step"><b>03</b><h4>Llevar a producción</h4><p>Despliegue, monitorización y mejora continua con datos reales.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <h2>¿Construimos algo?</h2>
+    <p>Si tienes un producto en mente o necesitas a alguien que lo lleve de la idea a producción, escríbeme.</p>
+    <div class="ctas">
+      <!-- TODO: sustituye TU_EMAIL y TU_PERFIL por los tuyos -->
+      <a class="btn primary" href="mailto:TU_EMAIL">Escríbeme</a>
+      <a class="btn" href="https://www.linkedin.com/in/TU_PERFIL" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/cvic-portfolio" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Carlos · cvic</span>
+    <span>Hecho con ayuda de IA.</span>
+  </div>
+</footer>
+
+</body>
+</html>
