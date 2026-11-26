@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Carlos · cvic — Portfolio</title>
-<meta name="description" content="Portfolio de Carlos (cvic): producto, fintech, apps con IA y webs. Exchange cripto, apps móviles, herramientas de trading y landings multilingües.">
+<meta name="description" content="Carlos (cvic)'s portfolio: product, fintech, AI apps and websites. Crypto exchange, mobile apps, trading tools and multilingual landing pages.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -136,75 +136,75 @@
   <div class="wrap">
     <a class="logo" href="#">cvic<span>.</span>portfolio</a>
     <ul>
-      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#stack">Stack</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Producto · Fintech · IA</p>
-    <h1>Construyo productos <em>de principio a fin</em>.</h1>
-    <p class="lead">Soy Carlos. Diseño y lanzo plataformas completas: desde un exchange de criptomonedas con motor de matching propio hasta apps móviles con IA, herramientas de trading y webs multilingües. Trabajo con agentes de IA para llevar ideas a producción rápido y bien.</p>
+    <p class="eyebrow">Product · Fintech · AI</p>
+    <h1>I build products <em>end to end</em>.</h1>
+    <p class="lead">I'm Carlos. I design and ship complete platforms: from a crypto exchange with its own matching engine to AI-powered mobile apps, trading tools and multilingual websites. I work with AI agents to take ideas to production fast and well.</p>
     <div class="ctas">
-      <a class="btn primary" href="#proyectos">Ver proyectos ↓</a>
-      <a class="btn" href="#contacto">Hablemos</a>
+      <a class="btn primary" href="#projects">See projects ↓</a>
+      <a class="btn" href="#contact">Let's talk</a>
     </div>
     <div class="stats">
-      <div class="stat"><b>8+</b><span>productos construidos</span></div>
-      <div class="stat"><b>4</b><span>exchanges integrados</span></div>
-      <div class="stat"><b>3</b><span>idiomas en producción</span></div>
-      <div class="stat"><b>Web · Móvil</b><span>iOS y Android</span></div>
+      <div class="stat"><b>8+</b><span>products built</span></div>
+      <div class="stat"><b>4</b><span>exchanges integrated</span></div>
+      <div class="stat"><b>3</b><span>languages in production</span></div>
+      <div class="stat"><b>Web · Mobile</b><span>iOS and Android</span></div>
     </div>
   </div>
 </header>
 
-<section id="proyectos">
+<section id="projects">
   <div class="wrap">
     <div class="section-head">
-      <h2>Proyectos destacados</h2>
-      <p>Una selección de lo que he construido. Algunos son privados o de clientes: aquí cuento qué hacen y cómo están hechos.</p>
+      <h2>Selected projects</h2>
+      <p>A selection of what I've built. Some are private or client work, so here I describe what they do and how they're built.</p>
     </div>
 
     <article class="featured">
       <div class="body">
-        <span class="kicker">Fintech · Plataforma completa</span>
-        <h3>Exchange de criptomonedas</h3>
-        <p>Ecosistema completo de un exchange: trading spot y futuros perpetuos, app móvil, panel de administración, web de marketing y gráficos en tiempo real.</p>
+        <span class="kicker">Fintech · Full platform</span>
+        <h3>Crypto exchange</h3>
+        <p>A complete exchange ecosystem: spot and perpetual futures trading, mobile app, admin panel, marketing site and real-time charts.</p>
         <ul class="points">
-          <li>Motor de matching de baja latencia sobre Aeron, sin Kafka</li>
-          <li>Motor de perpetuos en Go: margen, mark price, funding y liquidaciones</li>
-          <li>Motor de gráficos propio en WebGL2</li>
-          <li>Backend de KYC, compliance y tesorería; app móvil con Expo</li>
+          <li>Low-latency matching engine on Aeron, no Kafka</li>
+          <li>Perpetuals engine in Go: margin, mark price, funding and liquidations</li>
+          <li>Custom WebGL2 charting engine</li>
+          <li>KYC, compliance and treasury backend; Expo mobile app</li>
         </ul>
         <div class="tags">
           <span class="tag">Go</span><span class="tag">Java · Aeron</span><span class="tag">Django</span><span class="tag">Next.js</span><span class="tag">React Native</span><span class="tag">WebGL2</span><span class="tag">WebSockets</span>
         </div>
       </div>
       <div class="visual">
-        <div class="arch" role="img" aria-label="Arquitectura simplificada del exchange: clientes web, móvil y admin; API y core; motores de matching y perpetuos; servicios de ticker, velas y persistencia">
+        <div class="arch" role="img" aria-label="Simplified exchange architecture: web, mobile and admin clients; API and core; matching and perpetuals engines; ticker, candle and persistence services">
           <div class="row c3">
             <div class="node">Web<small>Next.js</small></div>
-            <div class="node">App móvil<small>Expo</small></div>
+            <div class="node">Mobile app<small>Expo</small></div>
             <div class="node">Admin<small>Next.js</small></div>
           </div>
           <div class="arrow">↓</div>
           <div class="row c2">
             <div class="node">API<small>Django REST</small></div>
-            <div class="node">Core<small>Go · KYC · tesorería</small></div>
+            <div class="node">Core<small>Go · KYC · treasury</small></div>
           </div>
           <div class="arrow">↓</div>
           <div class="row c2">
             <div class="node hot"><b>Matching engine</b><small>Aeron · µs</small></div>
-            <div class="node hot"><b>Perp engine</b><small>Go · riesgo</small></div>
+            <div class="node hot"><b>Perp engine</b><small>Go · risk</small></div>
           </div>
           <div class="arrow">↓</div>
           <div class="row c3">
             <div class="node">Ticker<small>WebSocket</small></div>
-            <div class="node">Velas<small>agregación</small></div>
-            <div class="node">Persistencia<small>DB service</small></div>
+            <div class="node">Candles<small>aggregation</small></div>
+            <div class="node">Persistence<small>DB service</small></div>
           </div>
         </div>
       </div>
@@ -212,74 +212,74 @@
 
     <article class="featured">
       <div class="body">
-        <span class="kicker">App móvil · IA</span>
+        <span class="kicker">Mobile app · AI</span>
         <h3>Kintsu</h3>
-        <p>App de suscripción con un coach de pareja basado en IA, pensada para lanzarse en Emiratos Árabes Unidos. Diseñé el producto completo: el "cerebro" del coach, el protocolo de seguridad, los precios y las 17 pantallas del prototipo.</p>
+        <p>A subscription app with an AI relationship coach, built for launch in the United Arab Emirates. I designed the whole product: the coach's "brain", the safety protocol, pricing and the 17-screen prototype.</p>
         <ul class="points">
-          <li>Marco de diagnóstico y base de conocimiento propios</li>
-          <li>Protocolo de seguridad para situaciones urgentes</li>
-          <li>Modelo de suscripción con límites de uso</li>
+          <li>Custom diagnostic framework and knowledge base</li>
+          <li>Safety protocol for urgent situations</li>
+          <li>Subscription model with usage limits</li>
         </ul>
         <div class="tags">
-          <span class="tag">Diseño de producto</span><span class="tag">LLM</span><span class="tag">Prompt design</span><span class="tag">Mobile UX</span>
+          <span class="tag">Product design</span><span class="tag">LLM</span><span class="tag">Prompt design</span><span class="tag">Mobile UX</span>
         </div>
       </div>
       <div class="visual">
         <div class="phones">
-          <img src="assets/kintsu-05-home.jpg" alt="Kintsu: pantalla de inicio" loading="lazy">
-          <img src="assets/kintsu-07-coach-chat.jpg" alt="Kintsu: chat con el coach" loading="lazy">
-          <img src="assets/kintsu-10-crack-progress.jpg" alt="Kintsu: pantalla de progreso" loading="lazy">
+          <img src="assets/kintsu-05-home.jpg" alt="Kintsu: home screen" loading="lazy">
+          <img src="assets/kintsu-07-coach-chat.jpg" alt="Kintsu: coach chat" loading="lazy">
+          <img src="assets/kintsu-10-crack-progress.jpg" alt="Kintsu: progress screen" loading="lazy">
         </div>
       </div>
     </article>
 
     <div class="grid">
       <article class="card">
-        <span class="kicker">Web · Cliente</span>
+        <span class="kicker">Web · Client</span>
         <h3>Archer Cross</h3>
-        <p>Matchmaking premium para expatriados en Dubái. Web pública más un CRM interno para gestionar todo el proceso de matchmaking.</p>
+        <p>Premium matchmaking for expats in Dubai. Public website plus an internal CRM that runs the whole matchmaking process.</p>
         <div class="tags"><span class="tag">Next.js</span><span class="tag">Drizzle</span><span class="tag">Supabase</span></div>
         <a class="link" href="https://archercross.ae" target="_blank" rel="noopener">archercross.ae ↗</a>
       </article>
 
       <article class="card">
-        <span class="kicker">Web · Multilingüe</span>
+        <span class="kicker">Web · Multilingual</span>
         <h3>Eros on Air</h3>
-        <p>Landing editorial en italiano, inglés y español para un concurso de casting cinematográfico italiano. Estética pompeyana y web 100 % estática.</p>
+        <p>Editorial landing page in Italian, English and Spanish for an Italian film casting contest. Pompeian aesthetic, fully static.</p>
         <div class="tags"><span class="tag">Astro 5</span><span class="tag">i18n</span><span class="tag">Cloudflare Pages</span></div>
-        <span class="link off">Proyecto privado</span>
+        <span class="link off">Private project</span>
       </article>
 
       <article class="card">
-        <span class="kicker">Trading · Datos</span>
+        <span class="kicker">Trading · Data</span>
         <h3>liqmap</h3>
-        <p>Mapa diario de los muros de liquidación de BTC y ETH, agregando Binance, Bybit, OKX e Hyperliquid con un modelo propio basado en open interest.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Modelado</span><span class="tag">Heatmaps</span></div>
-        <span class="link off">Herramienta interna</span>
+        <p>Daily map of BTC and ETH liquidation walls, aggregating Binance, Bybit, OKX and Hyperliquid with a custom open-interest model.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Modeling</span><span class="tag">Heatmaps</span></div>
+        <span class="link off">Internal tool</span>
       </article>
 
       <article class="card">
-        <span class="kicker">Trading · Herramienta</span>
+        <span class="kicker">Trading · Tool</span>
         <h3>Binance Futures Calculator</h3>
-        <p>Análisis de una cuenta de futuros: PnL histórico, comisiones, funding, posiciones en vivo y simulador de entradas con riesgo y liquidación.</p>
+        <p>Futures account analytics: historical PnL, fees, funding, live positions and an entry simulator with risk and liquidation.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Vercel</span></div>
-        <a class="link" href="https://binance-calculator-ten.vercel.app" target="_blank" rel="noopener">Ver demo ↗</a>
+        <a class="link" href="https://binance-calculator-ten.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
       </article>
 
       <article class="card">
-        <span class="kicker">Herramienta · Startups</span>
+        <span class="kicker">Tool · Startups</span>
         <h3>Fundraising</h3>
-        <p>App para preparar el pitch a inversores y hacer seguimiento de cada conversación, con seguimientos automáticos y tests antes de cada despliegue.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Automatización</span></div>
-        <span class="link off">Herramienta interna</span>
+        <p>An app to prepare investor pitches and track every conversation, with automatic follow-ups and tests before every deploy.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Automation</span></div>
+        <span class="link off">Internal tool</span>
       </article>
 
       <article class="card">
-        <span class="kicker">Cripto · Analítica</span>
+        <span class="kicker">Crypto · Analytics</span>
         <h3>Wallet Tracker</h3>
-        <p>Seguimiento de carteras cripto con vista consolidada de saldos y movimientos.</p>
+        <p>Crypto wallet tracking with a consolidated view of balances and transactions.</p>
         <div class="tags"><span class="tag">Next.js</span><span class="tag">Vercel</span></div>
-        <a class="link" href="https://tx24-wallet-tracker.vercel.app" target="_blank" rel="noopener">Ver demo ↗</a>
+        <a class="link" href="https://tx24-wallet-tracker.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
       </article>
     </div>
   </div>
@@ -288,30 +288,30 @@
 <section id="stack">
   <div class="wrap">
     <div class="section-head">
-      <h2>Stack y forma de trabajar</h2>
-      <p>Elijo la herramienta según el problema: Go y Java para latencia, Python para datos, TypeScript para producto.</p>
+      <h2>Stack and how I work</h2>
+      <p>I pick the tool for the problem: Go and Java for latency, Python for data, TypeScript for product.</p>
     </div>
     <div class="skills">
       <div><h4>Frontend</h4><ul><li>Next.js · React</li><li>Astro</li><li>React Native · Expo</li><li>WebGL2</li></ul></div>
       <div><h4>Backend</h4><ul><li>Go</li><li>Python · Django</li><li>Java · Aeron</li><li>PostgreSQL · SQLite</li></ul></div>
-      <div><h4>Infra</h4><ul><li>Vercel · Cloudflare</li><li>Fly.io · Docker</li><li>WebSockets</li><li>Monorepos pnpm</li></ul></div>
-      <div><h4>IA</h4><ul><li>Desarrollo con agentes (Claude Code)</li><li>Diseño de prompts</li><li>Coaches y asistentes con LLM</li></ul></div>
+      <div><h4>Infra</h4><ul><li>Vercel · Cloudflare</li><li>Fly.io · Docker</li><li>WebSockets</li><li>pnpm monorepos</li></ul></div>
+      <div><h4>AI</h4><ul><li>Agent-driven development (Claude Code)</li><li>Prompt design</li><li>LLM coaches and assistants</li></ul></div>
     </div>
 
     <div class="process">
-      <div class="step"><b>01</b><h4>Entender el problema</h4><p>Defino qué hay que resolver, para quién y cómo se mide el éxito antes de escribir código.</p></div>
-      <div class="step"><b>02</b><h4>Construir rápido</h4><p>Prototipo funcional en días, con agentes de IA acelerando el desarrollo y tests desde el principio.</p></div>
-      <div class="step"><b>03</b><h4>Llevar a producción</h4><p>Despliegue, monitorización y mejora continua con datos reales.</p></div>
+      <div class="step"><b>01</b><h4>Understand the problem</h4><p>I define what needs solving, for whom, and how success is measured before writing code.</p></div>
+      <div class="step"><b>02</b><h4>Build fast</h4><p>A working prototype in days, with AI agents speeding up development and tests from day one.</p></div>
+      <div class="step"><b>03</b><h4>Ship to production</h4><p>Deployment, monitoring and continuous improvement with real data.</p></div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contacto">
+<section class="contact" id="contact">
   <div class="wrap">
-    <h2>¿Construimos algo?</h2>
-    <p>Si tienes un producto en mente o necesitas a alguien que lo lleve de la idea a producción, escríbeme.</p>
+    <h2>Let's build something</h2>
+    <p>If you have a product in mind or need someone to take it from idea to production, get in touch.</p>
     <div class="ctas">
-      <a class="btn primary" href="mailto:c.vicioso.job@gmail.com">Escríbeme</a>
+      <a class="btn primary" href="mailto:c.vicioso.job@gmail.com">Email me</a>
       <a class="btn" href="https://www.linkedin.com/in/carlos-vicioso" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="btn" href="https://github.com/cvicportfolio" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
@@ -321,7 +321,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Carlos · cvic</span>
-    <span>Hecho con ayuda de IA.</span>
+    <span>Built with help from AI.</span>
   </div>
 </footer>
 
