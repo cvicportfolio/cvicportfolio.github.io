@@ -204,6 +204,7 @@
     const layers = $$("[data-speed]");
     const phones = $$(".phones img");
     const phoneSpeeds = [0.08, -0.06, 0.12];
+    const shots = $$(".shot img");
     const statement = $(".statement");
     const lines = $$(".statement .line");
     let mouseX = 0, mouseY = 0, easedMX = 0, easedMY = 0;
@@ -241,6 +242,13 @@
 
       phones.forEach((img, i) => {
         img.style.transform = `translate3d(0, ${centerOffset(img.parentElement) * -phoneSpeeds[i]}px, 0)`;
+      });
+
+      shots.forEach((img) => {
+        const frame = img.parentElement;
+        const travel = Math.max(0, img.offsetHeight - frame.offsetHeight);
+        const t = Math.max(-1, Math.min(1, centerOffset(frame) / window.innerHeight));
+        img.style.transform = `translate3d(0, ${-((1 - t) / 2) * travel}px, 0)`;
       });
 
       if (statement && lines.length) {
