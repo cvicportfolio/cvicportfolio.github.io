@@ -52,7 +52,6 @@
   .stat { padding: 24px 16px 0 0; }
   .stat b { display: block; font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.1; }
   .stat span { font-size: 13px; color: var(--muted); }
-  .footnote { margin-top: 20px; font-size: 12px; color: var(--muted); max-width: 80ch; }
 
   section { padding: 96px 0; border-top: 1px solid var(--line); }
   .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 48px; flex-wrap: wrap; }
@@ -155,11 +154,10 @@
     </div>
     <div class="stats">
       <div class="stat"><b>15 yrs</b><span>in crypto &amp; fintech</span></div>
-      <div class="stat"><b>373K</b><span>orders/s per pair, matching engine*</span></div>
+      <div class="stat"><b>373K</b><span>orders/s per pair, matching engine</span></div>
       <div class="stat"><b>US$1M</b><span>pre-seed raised</span></div>
       <div class="stat"><b>20</b><span>person team led</span></div>
     </div>
-    <p class="footnote">* Median of 5 runs × 1M commands, end to end over Aeron IPC with production risk rules on, every fill checked against an independent reference matcher. Measured on an Apple M2 laptop, November 2026.</p>
   </div>
 </header>
 
@@ -176,7 +174,7 @@
         <h3>Crypto exchange</h3>
         <p>A complete exchange ecosystem: spot and perpetual futures trading, mobile app, admin panel, marketing site and real-time charts.</p>
         <ul class="points">
-          <li>Low-latency matching engine on Aeron: 373K orders/s and 140K fills/s per pair, every fill verified*</li>
+          <li>Low-latency matching engine on Aeron: 373K orders/s and 140K fills/s per pair, every fill verified</li>
           <li>Perpetuals engine in Go: margin, mark price, funding and liquidations</li>
           <li>Three-tier custody vault (hot/warm/cold) with MPC signing and HSM-backed keys</li>
           <li>WebGL2 charting engine: 10k candles at 60 FPS</li>
