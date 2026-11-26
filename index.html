@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carlos · cvic — Portfolio</title>
-<meta name="description" content="Carlos (cvic)'s portfolio: product, fintech, AI apps and websites. Crypto exchange, mobile apps, trading tools and multilingual landing pages.">
+<title>Carlos Vicioso — Head of Fintech Products</title>
+<meta name="description" content="Carlos Vicioso, Head of Fintech Products: 15 years in crypto. Exchange platforms, payments, custody, risk and AI-agent engineering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -52,6 +52,7 @@
   .stat { padding: 24px 16px 0 0; }
   .stat b { display: block; font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.1; }
   .stat span { font-size: 13px; color: var(--muted); }
+  .footnote { margin-top: 20px; font-size: 12px; color: var(--muted); max-width: 80ch; }
 
   section { padding: 96px 0; border-top: 1px solid var(--line); }
   .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 48px; flex-wrap: wrap; }
@@ -145,19 +146,20 @@
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Product · Fintech · AI</p>
+    <p class="eyebrow">Head of Fintech Products · Dubai</p>
     <h1>I build products <em>end to end</em>.</h1>
-    <p class="lead">I'm Carlos. I design and ship complete platforms: from a crypto exchange with its own matching engine to AI-powered mobile apps, trading tools and multilingual websites. I work with AI agents to take ideas to production fast and well.</p>
+    <p class="lead">I'm Carlos Vicioso, a fintech product leader with 15 years in crypto: exchanges, payments, custody and risk. As founder &amp; CEO I built a multi-product exchange platform, secured a VASP licence and led a team of 20, orchestrating AI agents to ship software built for regulated markets.</p>
     <div class="ctas">
       <a class="btn primary" href="#projects">See projects ↓</a>
       <a class="btn" href="#contact">Let's talk</a>
     </div>
     <div class="stats">
-      <div class="stat"><b>8+</b><span>products built</span></div>
-      <div class="stat"><b>4</b><span>exchanges integrated</span></div>
-      <div class="stat"><b>3</b><span>languages in production</span></div>
-      <div class="stat"><b>Web · Mobile</b><span>iOS and Android</span></div>
+      <div class="stat"><b>15 yrs</b><span>in crypto &amp; fintech</span></div>
+      <div class="stat"><b>373K</b><span>orders/s per pair, matching engine*</span></div>
+      <div class="stat"><b>US$1M</b><span>pre-seed raised</span></div>
+      <div class="stat"><b>20</b><span>person team led</span></div>
     </div>
+    <p class="footnote">* Median of 5 runs × 1M commands, end to end over Aeron IPC with production risk rules on, every fill checked against an independent reference matcher. Measured on an Apple M2 laptop, November 2026.</p>
   </div>
 </header>
 
@@ -174,10 +176,11 @@
         <h3>Crypto exchange</h3>
         <p>A complete exchange ecosystem: spot and perpetual futures trading, mobile app, admin panel, marketing site and real-time charts.</p>
         <ul class="points">
-          <li>Low-latency matching engine on Aeron, no Kafka</li>
+          <li>Low-latency matching engine on Aeron: 373K orders/s and 140K fills/s per pair, every fill verified*</li>
           <li>Perpetuals engine in Go: margin, mark price, funding and liquidations</li>
-          <li>Custom WebGL2 charting engine</li>
-          <li>KYC, compliance and treasury backend; Expo mobile app</li>
+          <li>Three-tier custody vault (hot/warm/cold) with MPC signing and HSM-backed keys</li>
+          <li>WebGL2 charting engine: 10k candles at 60 FPS</li>
+          <li>VASP licence and full KYC/AML compliance system</li>
         </ul>
         <div class="tags">
           <span class="tag">Go</span><span class="tag">Java · Aeron</span><span class="tag">Django</span><span class="tag">Next.js</span><span class="tag">React Native</span><span class="tag">WebGL2</span><span class="tag">WebSockets</span>
@@ -324,7 +327,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Carlos · cvic</span>
+    <span>© 2026 Carlos Vicioso</span>
     <span>Built with help from AI.</span>
   </div>
 </footer>
