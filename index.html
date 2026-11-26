@@ -129,8 +129,10 @@
     * { transition: none !important; scroll-behavior: auto !important; }
   }
 </style>
+<link rel="stylesheet" href="effects.css">
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
 
 <nav>
   <div class="wrap">
@@ -144,7 +146,11 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
+  <div class="grid-bg" data-speed="0.25" aria-hidden="true"></div>
+  <div class="orb orb-a" data-speed="0.45" data-mouse="60" aria-hidden="true"></div>
+  <div class="orb orb-b" data-speed="0.15" data-mouse="-40" aria-hidden="true"></div>
+  <canvas class="hero-canvas" data-speed="0.3" aria-hidden="true"></canvas>
+  <div class="wrap hero-content" data-speed="-0.15">
     <p class="eyebrow">Head of Fintech Products · Dubai</p>
     <h1>I build products <em>end to end</em>.</h1>
     <p class="lead">I'm Carlos Vicioso, a fintech product leader with 15 years in crypto: exchanges, payments, custody and risk. As founder &amp; CEO I built a multi-product exchange platform, secured a VASP licence and led a team of 20, orchestrating AI agents to ship software built for regulated markets.</p>
@@ -153,13 +159,35 @@
       <a class="btn" href="#contact">Let's talk</a>
     </div>
     <div class="stats">
-      <div class="stat"><b>15 yrs</b><span>in crypto &amp; fintech</span></div>
-      <div class="stat"><b>373K</b><span>orders/s per pair, matching engine</span></div>
+      <div class="stat"><b data-count="15" data-suffix=" yrs">15 yrs</b><span>in crypto &amp; fintech</span></div>
+      <div class="stat"><b data-count="373" data-suffix="K">373K</b><span>orders/s per pair, matching engine</span></div>
       <div class="stat"><b>US$1M</b><span>pre-seed raised</span></div>
-      <div class="stat"><b>20</b><span>person team led</span></div>
+      <div class="stat"><b data-count="20">20</b><span>person team led</span></div>
     </div>
   </div>
+  <div class="scroll-cue" aria-hidden="true">Scroll</div>
 </header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Matching engines</span>
+    <span>Perpetual futures</span>
+    <span>Custody &amp; MPC</span>
+    <span>Payments &amp; POS</span>
+    <span>KYC / AML</span>
+    <span>AI agents</span>
+    <span>Mobile apps</span>
+    <span>WebGL2 charts</span>
+    <span>Matching engines</span>
+    <span>Perpetual futures</span>
+    <span>Custody &amp; MPC</span>
+    <span>Payments &amp; POS</span>
+    <span>KYC / AML</span>
+    <span>AI agents</span>
+    <span>Mobile apps</span>
+    <span>WebGL2 charts</span>
+  </div>
+</div>
 
 <section id="projects">
   <div class="wrap">
@@ -286,6 +314,11 @@
   </div>
 </section>
 
+<section class="statement" aria-label="373,000 orders per second, every fill verified">
+  <div class="line l1" aria-hidden="true">373,000 orders <em>per second</em> · 373,000 orders <em>per second</em></div>
+  <div class="line l2" aria-hidden="true">every fill <em>verified</em> · every fill <em>verified</em> · every fill <em>verified</em></div>
+</section>
+
 <section id="stack">
   <div class="wrap">
     <div class="section-head">
@@ -330,5 +363,6 @@
   </div>
 </footer>
 
+<script src="effects.js" defer></script>
 </body>
 </html>
